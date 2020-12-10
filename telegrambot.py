@@ -64,7 +64,7 @@ def convert_image(update, context):
 
 def main():
 
-    token = "1323879880:AAH1wCHjPvrpy2fUSdNFiGbCMFQz7CwA21s"
+    token = os.environ.get("tg_token", "")
 
     """Start the bot."""
     # Create the Updater and pass it your bot's token.
