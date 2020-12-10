@@ -45,11 +45,13 @@ def convert_image(update, context):
     # using tesseract.
     # language = checkif
     try:
+        update.message.reply_text("trying............................")
         ocred_stuff = (pytesseract.image_to_string(
             # Image.open(file_name), lang='hin'))
             Image.open(file_name), lang='eng'))
         if ocred_stuff is not None:
             update.message.reply_text(ocred_stuff)
+            update.message.reply_text("done buddy !")
         else:
             update.message.reply_text(
                 "Sorry I can't understand the texts written in image.")
