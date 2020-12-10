@@ -48,7 +48,7 @@ def convert_image(update, context):
         update.message.reply_text("trying............................")
         ocred_stuff = (pytesseract.image_to_string(
             # Image.open(file_name), lang='hin'))
-            Image.open(file_name), lang='eng'))
+            Image.open(file_name)))
         if ocred_stuff is not None:
             update.message.reply_text(ocred_stuff)
             update.message.reply_text("done buddy !")
