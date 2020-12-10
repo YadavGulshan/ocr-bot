@@ -14,7 +14,7 @@ from traceback import print_exc
 def start(update, context):
     """Send a message when the command /start is issued."""
     update.message.reply_text(
-        'Hi! Gulshan\nWhat You want me to do ?\nOCR an Image containing\n1.English\n2.Hindi')
+        'Hi! Gulshan\nWhat You want me to do ?\nOCR an Image containing\n1.English')
     # update.message.reply_text(
     #     'https://stackoverflow.com/questions/12277933/send-data-from-a-textbox-into-flask')
 
@@ -48,14 +48,14 @@ def convert_image(update, context):
         ocred_stuff = (pytesseract.image_to_string(
             # Image.open(file_name), lang='hin'))
             Image.open(file_name), lang='eng'))
+        if ocred_stuff is not None:
+            update.message.reply_text(ocred_stuff)
+        else:
+            update.message.reply_text(
+                "Sorry I can't understand the texts written in image.")
+        print("process completed")
     except Exception:
         print_exc()
-    if ocred_stuff is not None:
-        update.message.reply_text(ocred_stuff)
-    else:
-        update.message.reply_text(
-            "Sorry I can't understand the texts written in image.")
-    print("process completed")
     os.remove(file_name)
     ########################
 
