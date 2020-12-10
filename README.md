@@ -8,9 +8,9 @@ This is an telegram bot for getting ocr of a given image in which words are writ
     
 2. Add some buildpacks to install tesseract and make heroku work with python.
   heroku/python
-  https://github.com/heroku/heroku-buildpack-apt.git
+  https://github.com/heroku/heroku-buildpack-apt.git [br]
   https://github.com/chanzuckerberg/heroku-buildpack-tesseract
   # Optional
   
-  https://github.com/pathwaysmedical/heroku-buildpack-tesseract
+  https://github.com/pathwaysmedical/heroku-buildpack-tesseract [br]
   https://github.com/matteotiziano/heroku-buildpack-tesseract
