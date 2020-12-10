@@ -3,7 +3,7 @@ This is an telegram bot for getting ocr of a given image in which words are writ
 
 # Heroku tips.
 
-1. User must add a key value pair. 
+1. User must add a key value pair. <br>
     tg_token = your telegram bot token
     
 2. Add some buildpacks to install tesseract and make heroku work with python.<br>
